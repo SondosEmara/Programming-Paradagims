@@ -6,6 +6,7 @@ namespace Programming_Paradagim_C_
     {
         public static IEnumerable<int> SelectExtension<TSource>(this IEnumerable<TSource> source, Func<TSource, int> targetFunction)
         {
+            //Function SelectExtension Take in Paramter another function() --> Higher Order Function
             foreach (var item in source)
             {
                 yield return targetFunction(item);
@@ -104,6 +105,7 @@ namespace Programming_Paradagim_C_
             return result;
         }
     }
+
     internal class Program
     {
         static void Main(string[] args)
